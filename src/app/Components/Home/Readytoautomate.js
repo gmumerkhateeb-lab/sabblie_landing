@@ -8,10 +8,11 @@ const Readytoautomate = () => {
          SECURELY?
         </h1>
         <p className="mt-4 text-black text-normal max-w-[1072] h-[44px] mx-auto text-[18px] leading-normal">
-         Transform your business with AI that's designed for growth, built for security,
-          and delivered with the expertise you need
-          <br /> to succeed.
-        </p>
+  Transform your business with AI that&#39;s designed for growth, built for security,
+  and delivered with the expertise you need
+  <br /> to succeed.
+</p>
+
       </div>
 
       {/* cards */}
