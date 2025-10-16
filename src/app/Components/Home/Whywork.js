@@ -102,7 +102,7 @@ const Card = ({ id, title, desc, Icon }) => (
 export default function Whywork() {
   return (
     <section>
-      <div className="mt-[152px] flex flex-col justify-center items-center">
+      <div className="Whywork  mt-[152px] flex flex-col justify-center items-center">
         <h1 className="flex justify-center gap-2 mx-auto items-center text-[48px] text-primary leading-[47px] font-bold">
           WHY WORK{" "}
           <span className="text-[48px] leading-[47px] font-bold" style={{ color: "var(--text-primary2)" }}>

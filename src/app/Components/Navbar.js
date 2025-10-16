@@ -15,7 +15,7 @@ const Navbar = () => {
         </div>
         <div>
             <button className="text-white text-[11px] font-normal 
-             leading-[15px] rounded-[9px] px-[12px] py-[6px] bg-[#39B1BE]">
+             leading-[15px] rounded-[9px] px-[13px] py-[10px] bg-[#39B1BE]">
                 Contact Us
             </button>
         </div>

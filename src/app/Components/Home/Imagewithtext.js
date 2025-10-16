@@ -4,7 +4,7 @@ import Primarybutton from "../Primarybutton";
 
 const Imagewithtext = () => {
   return (
-    <section className="bg-white py-20">
+    <section className="Imagewithtext  py-20">
       <div className="container mx-auto px-6 md:px-12 lg:px-20 flex flex-col md:flex-row items-center gap-10">
         
         {/* ---------- Left Side Image ---------- */}

@@ -3,7 +3,7 @@ import Primarybutton from "../Primarybutton";
 
 const Hero = () => {
   return (
-    <div className="relative z-100">
+    <div className="Hero relative z-100">
       <div className="mx-auto text-center mt-[220px] max-w-[968px] px-[96px] py-[24px] relative">
         {/* Background image inside text section */}
         <Image
