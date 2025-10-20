@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <div className="relative flex flex-wrap justify-between items-center mx-auto mt-[20px] px-4">
-      {/* Logo */}
+      
       <div className="flex-shrink-0">
         <Image src="/icons/Logo.png" alt="logo" width={42} height={42} />
       </div>
@@ -38,7 +38,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Hamburger Button (Mobile) */}
+      {/*  Button (Mobile) */}
       <div className="md:hidden ml-3">
         <button
           onClick={() => setMenuOpen(!menuOpen)}
