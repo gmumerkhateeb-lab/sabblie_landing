@@ -1,7 +1,3 @@
-// components/BuiltWithSecurity.jsx
-import React from "react";
-
-/* ---------------- Icons ---------------- */
 const Icon1 = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width={29} height={29} viewBox="0 0 29 29" fill="none">
     <path
@@ -110,17 +106,19 @@ const cards = [
 const Card = ({ id, title, desc, Icon }) => (
   <article
     key={id}
-    className="w-[305px] h-[213px] bg-white rounded-[13px] shadow-[0_5px_86px_0_rgba(72,104,200,0.25)] overflow-hidden mx-auto"
+    className="w-full max-w-[330px] sm:max-w-[305px] bg-white rounded-[13px] 
+    shadow-[0_5px_86px_0_rgba(72,104,200,0.25)] overflow-hidden text-center sm:text-left 
+    flex flex-col h-full"  
     aria-labelledby={`card-${id}`}
   >
-    <div className="px-[24px] pt-[24px] mx-auto">
-      <div className="w-[58px] h-[58px] flex items-center justify-center bg-[#39B1BE1A] rounded-lg">
+    <div className="px-[24px] pt-[24px] pb-[30px] flex flex-col flex-grow"> {/* ✅ added flex-grow */}
+      <div className="w-[58px] h-[58px] flex items-center justify-center bg-[#39B1BE1A] rounded-lg mx-auto sm:mx-0">
         <Icon />
       </div>
       <h2 id={`card-${id}`} className="text-[17px] font-bold leading-[27px] text-[#1E1E1E] pt-[24px]">
         {title}
       </h2>
-      <p className="text-[14px] font-normal leading-[20px] text-[#1E1E1E] pt-[10px] pb-[30px]">
+      <p className="text-[14px] font-normal leading-[20px] text-[#1E1E1E] pt-[10px]">
         {desc}
       </p>
     </div>
@@ -130,20 +128,20 @@ const Card = ({ id, title, desc, Icon }) => (
 /* ---------------- Main Component ---------------- */
 export default function BuiltWithSecurity() {
   return (
-    <section className="py-16 ">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h1 className="text-[40px] md:text-[48px] leading-[47px] font-bold text-[#1E1E1E] mb-4">
+    <section className="py-7 sm:py-16">
+      <div className="  px-4">
+        <div className="text-center mb-5 sm:mb-12">
+          <h1 className="text-[23px] sm:text-[30px] md:text-[42px] lg:text-[48px] leading-[40px] sm:leading-[47px] font-bold text-[#1E1E1E] mb-1 sm:mb-4">
             BUILT WITH <span className="text-[#39B1BE]">SECURITY</span> IN MIND
           </h1>
-          <p className="text-[17px] md:text-[18px] leading-[27px] max-w-[760px] mx-auto text-[#1E1E1E]">
+          <p className="text-[15px] sm:text-[17px] md:text-[18px] leading-[25px] sm:leading-[27px] max-w-[760px] mx-auto text-[#1E1E1E]">
             Every AI system we implement follows enterprise-grade security protocols. Your data stays protected,
             your compliance requirements are met, and your business operates with complete confidence.
           </p>
         </div>
 
-        {/* Grid layout (replaces flex) */}
-        <div className="pt-[50px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[31px] place-items-center">
+        {/*  equal height grid fix */}
+        <div className="pt-[20px] sm:pt-[50px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-[31px] mx-auto justify-items-center items-stretch ">
           {cards.map((c) => (
             <Card key={c.id} {...c} />
           ))}

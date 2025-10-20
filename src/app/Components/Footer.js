@@ -1,21 +1,24 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
+  // 👇 Smooth scroll enable
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      document.documentElement.style.scrollBehavior = "smooth";
+    }
+  }, []);
+
   return (
-    <footer className="bg-[#0B0B0B] text-[#E3E3E3] py-12 px-6 md:px-16 border-t border-[#222]">
+    <footer className="bg-[#0B0B0B] text-[#E3E3E3] py-6 md:py-12 px-6 md:px-16 border-t border-[#222]">
       <div className="max-w-[1280px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Left Section */}
         <div>
           <div className="flex items-center mb-4">
-            <Image
-              src="/icons/Logo.png" 
-              alt="Logo"
-              width={48}
-              height={48}
-            />
+            <Image src="/icons/Logo.png" alt="Logo" width={48} height={48} />
           </div>
 
           <p className="text-sm leading-relaxed text-[#B3B3B3] max-w-[260px] mb-4">
@@ -41,12 +44,12 @@ const Footer = () => {
         <div>
           <h4 className="font-semibold text-white mb-3">Services</h4>
           <ul className="space-y-2 text-sm text-[#B3B3B3]">
-            <li>AI Strategy & Roadmapping</li>
-            <li>Automation Buildout</li>
-            <li>LLM Agent Implementation</li>
-            <li>Secure AI Deployments</li>
-            <li>Cybersecurity for AI</li>
-            <li>Training & Support</li>
+            <li><Link href="#strategy">AI Strategy & Roadmapping</Link></li>
+            <li><Link href="#automation">Automation Buildout</Link></li>
+            <li><Link href="#llm">LLM Agent Implementation</Link></li>
+            <li><Link href="#secure">Secure AI Deployments</Link></li>
+            <li><Link href="#cybersecurity">Cybersecurity for AI</Link></li>
+            <li><Link href="#training">Training & Support</Link></li>
           </ul>
         </div>
 
@@ -54,12 +57,12 @@ const Footer = () => {
         <div>
           <h4 className="font-semibold text-white mb-3">Resources</h4>
           <ul className="space-y-2 text-sm text-[#B3B3B3]">
-            <li>Case Studies</li>
-            <li>AI Readiness Assessment</li>
-            <li>Security Frameworks</li>
-            <li>Implementation Guide</li>
-            <li>ROI Calculator</li>
-            <li>Blog & Insights</li>
+            <li><Link href="#case-studies">Case Studies</Link></li>
+            <li><Link href="#assessment">AI Readiness Assessment</Link></li>
+            <li><Link href="#frameworks">Security Frameworks</Link></li>
+            <li><Link href="#guide">Implementation Guide</Link></li>
+            <li><Link href="#roi">ROI Calculator</Link></li>
+            <li><Link href="#blog">Blog & Insights</Link></li>
           </ul>
         </div>
 
@@ -69,11 +72,11 @@ const Footer = () => {
           <ul className="space-y-3 text-sm text-[#B3B3B3]">
             <li className="flex items-center gap-2">
               <Icon icon="mdi:email-outline" width="16" height="16" />
-              Sara@saitible.com
+              <Link href="mailto:Sara@saitible.com">Sara@saitible.com</Link>
             </li>
             <li className="flex items-center gap-2">
               <Icon icon="mdi:phone-outline" width="16" height="16" />
-              214-228-0773
+              <Link href="tel:2142280773">214-228-0773</Link>
             </li>
             <li className="flex items-center gap-2">
               <Icon icon="mdi:map-marker-outline" width="16" height="16" />
@@ -83,13 +86,13 @@ const Footer = () => {
 
           <div className="border-t border-[#222] mt-5 pt-5">
             <p className="text-sm text-white mb-2">AI Insights Newsletter</p>
-            <div className="flex">
+            <div className="flex gap-2">
               <input
                 type="email"
                 placeholder="Your email"
-                className="bg-[#1C1C1C] text-white text-sm px-3 py-2 rounded-l-md focus:outline-none w-full"
+                className="bg-[#252C41] text-white text-sm px-3 py-2 rounded-l-[9px] focus:outline-none w-full"
               />
-              <button className="bg-[#1E48B4] text-white text-sm px-4 py-2 rounded-r-md hover:bg-[#2B5DDA] transition">
+              <button className="bg-[#0E315B] text-white text-sm px-4 py-2 rounded-r-[9px] hover:bg-[#2B5DDA] transition">
                 Subscribe
               </button>
             </div>
@@ -99,22 +102,14 @@ const Footer = () => {
 
       {/* Divider */}
       <div className="border-t border-[#222] mt-10 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-[#888]">
+        <div className="flex flex-col gap-[12px]">
+            <p>© 2024 AI + Automation Consulting. All rights reserved.</p>
 
-        <div className="flex flex-row ">
-        <div className="flex flex-wrap items-center gap-3 mt-2 md:mt-0
-        ">
-         <p>© 2024 AI + Automation Consulting. All rights reserved.</p>
-       
-          <a href="#" className="hover:text-white">
-            Privacy Policy
-          </a>
-          <a href="#" className="hover:text-white">
-            Terms of Service
-          </a>
-          <a href="#" className="hover:text-white">
-            Cookie Policy
-          </a>
-        </div>
+          <div className="flex flex-wrap items-center gap-3 mt-2 md:mt-0">
+            <Link href="#privacy" className="hover:text-white">Privacy Policy</Link>
+            <Link href="#terms" className="hover:text-white">Terms of Service</Link>
+            <Link href="#cookie" className="hover:text-white">Cookie Policy</Link>
+          </div>
         </div>
       </div>
 

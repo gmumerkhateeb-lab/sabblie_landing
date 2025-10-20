@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-const Steps = () => {
+const OurProcess = () => {
   const steps = [
     {
       number: "01",
@@ -94,7 +94,7 @@ const Steps = () => {
   ];
 
   return (
-    <section className="Steps   py-20">
+    <section className="OurProcess py-5 sm:py-20">
       {/* ---------- Heading ---------- */}
       <div className="text-center mb-14">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
@@ -111,12 +111,13 @@ const Steps = () => {
         {steps.map((step, index) => (
           <div
             key={index}
-            className="relative w-full md:w-[45%] lg:w-[22%] flex flex-col items-center"
+            className="relative w-[35%] sm:w-[45%] lg:w-[22%] flex flex-col items-center"
           >
             {/* ---------- Number Circle ---------- */}
             <div className="flex flex-col items-center mb-6">
               <div className="bg-[#0E315B1A] text-gray-800 font-semibold rounded-full w-10 h-10 
-              flex items-center justify-center mb-3 border-[#0E315B] border-[2px]">
+              flex items-center justify-center mb-3 border-[#0E315B] border-[2px] absolute
+               right-[-8px] top-[-8px]">
                 {step.number}
               </div>
 
@@ -127,9 +128,9 @@ const Steps = () => {
             </div>
 
             {/* ---------- Card ---------- */}
-            <div className="bg-white  max-w-[294px] shadow-md rounded-xl p-6 border border-gray-100 text-center">
+            <div className="bg-white  max-w-[294px] shadow-md rounded-xl p-6 border border-gray-100 text-center h-full">
               <h3 className="text-[23px] font-bold text-black">{step.title}</h3>
-              <p className="text-[#1E48B4] text-[17px] font-semibold mt-1 leading-[27px]">
+              <p className="text-[#1E48B4] text-[17px] font-semibold mt-1 leading-[27px] whitespace-nowrap">
                 {step.subtitle}
               </p>
               <p className="text-black mt-3 font-normal text-[15px] leading-[25px] text-left">
@@ -150,4 +151,4 @@ const Steps = () => {
   );
 };
 
-export default Steps;
+export default OurProcess;

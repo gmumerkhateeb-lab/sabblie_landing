@@ -10,11 +10,14 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --color-primary: #39B1BE;
+  --color-primary: #39B1BE; 
   --color-primary21: #39B1BE1A;
   --text-primary:#3BB8BC;
   --text-primary:#000;
   --color-primary22:#FFF;
+
+  /* --xs:420px; */
+  --breakpoint-xs: 420px;
 }
 
 @media (prefers-color-scheme: dark) {

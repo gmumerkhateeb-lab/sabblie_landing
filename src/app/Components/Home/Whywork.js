@@ -1,7 +1,5 @@
-// components/Whywork.jsx
-import React from "react";
 
-/* --- Icons (converted to JSX - stroke attrs camelCase) --- */
+/* --- Icons  --- */
 const Icon1 = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width={31} height={31} viewBox="0 0 31 31" fill="none" aria-hidden>
     <path
@@ -69,7 +67,7 @@ const cards = [
 const Card = ({ id, title, desc, Icon }) => (
   <article
     key={id}
-    className="max-w-[294px] h-[328px] rounded-[13px] bg-primary22 overflow-hidden"
+    className="max-w-[294px] h-[270px] sm:h-[328px] rounded-[13px] bg-primary22 overflow-hidden"
     style={{
       boxShadow: "0 5.256px 86.726px 0 rgba(72, 104, 200, 0.25)",
     }}
@@ -82,14 +80,14 @@ const Card = ({ id, title, desc, Icon }) => (
 
       <h2
         id={`card-${id}`}
-        className="text-[19px] leading-[27px] font-bold pt-[24px]"
+        className="text-[19px] leading-[27px] font-bold pt-[12px] md:pt-[24px]"
         style={{ color: "var(--text-primary2)" }}
       >
         {title}
       </h2>
 
       <p
-        className="text-[15px] font-normal pt-[11px] pb-[72px]"
+        className="text-[15px] font-normal pt-[5px] md:pt-[11px] pb-[24px] md:pb-[72px]"
         style={{ color: "var(--text-primary2)" }}
       >
         {desc}
@@ -102,20 +100,31 @@ const Card = ({ id, title, desc, Icon }) => (
 export default function Whywork() {
   return (
     <section>
-      <div className="Whywork  mt-[152px] flex flex-col justify-center items-center">
-        <h1 className="flex justify-center gap-2 mx-auto items-center text-[48px] text-primary leading-[47px] font-bold">
-          WHY WORK{" "}
-          <span className="text-[48px] leading-[47px] font-bold" style={{ color: "var(--text-primary2)" }}>
-            WITH US
-          </span>
-        </h1>
+      <div className="Whywork mt-[13px] sm:mt-[60px] lg:mt-[152px] flex flex-col justify-center items-center px-4">
+       <h1
+  className="text-center mx-auto text-primary font-bold leading-tight 
+  text-[23px] sm:text-[30px] md:text-[42px] lg:text-[54px] flex flex-wrap justify-center items-center gap-2"
+>
+  WHY WORK{" "}
+  <span
+    className="font-bold text-[23px] sm:text-[30px] md:text-[42px] lg:text-[54px]"
+    style={{ color: "var(--text-primary)" }}
+  >
+    WITH US
+  </span>
+</h1>
 
-        <p className="text-[18px] leading-[27px] font-normal mx-auto text-center max-w-[760px] mt-4" style={{ color: "var(--text-primary2)" }}>
+        <p
+          className="text-[16px] sm:text-[18px] leading-[20px] sm:leading-[27px] font-normal mx-auto text-center max-w-[760px] mt-[6px] sm:mt-4"
+          style={{ color: "var(--text-primary2)" }}
+        >
           We combine deep technical expertise with strategic business insight to deliver AI solutions that actually move the needle.
         </p>
       </div>
 
-      <div className="pt-[50px] flex flex-wrap gap-[31px] items-start justify-center px-4">
+      {/* Responsive Flexbox Section */}
+      <div className="pt-[20px] sm:pt-[50px] flex flex-wrap gap-[31px] justify-center 
+      items-start px-4 sm:px-6 md:px-10">
         {cards.map((c) => (
           <Card key={c.id} {...c} />
         ))}

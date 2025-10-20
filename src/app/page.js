@@ -4,7 +4,7 @@ import Hero from "./Components/Home/Hero";
 import Whywork from "./Components/Home/Whywork";
 import Ourservices from "./Components/Home/Ourservices";
 import Imagewithtext from "./Components/Home/Imagewithtext";
-import Steps from "./Components/Home/Steps";
+import OurProcess from "./Components/Home/Ourprocess";
 import Readytostart from "./Components/Home/Readytostart";
 import Builtwithsecurity from "./Components/Home/Builtwithsecurity";
 import Securitystandards from "./Components/Home/Securitystandards";
@@ -21,7 +21,7 @@ export default function Home() {
         <Whywork />
         <Ourservices />
         <Imagewithtext />
-        <Steps />
+        <OurProcess />
         <Readytostart />
         <Builtwithsecurity />
         <Securitystandards />
