@@ -25,7 +25,6 @@ const Hero = () => {
           className="absolute left-[-14px] top-[-84px] z-0 hidden lg:block"
         />
 
-        {/* Heading */}
         <h1
           className="relative font-bold bg-gradient-to-r from-[#0E315B] to-[#3BB8BC] 
           bg-clip-text text-transparent z-10 whitespace-nowrap

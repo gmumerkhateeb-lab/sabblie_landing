@@ -1,5 +1,4 @@
 "use client";
-
 import Primarybutton from "../Primarybutton";
 
 const scrollToTop = () => {

@@ -17,8 +17,7 @@ const Readytostart = () => {
 
         <p
           className="text-[14px] sm:text-[15px] md:text-[16px] 
-          text-[#9FABBC] py-[12px] sm:py-[16px] max-w-[650px]"
-        >
+          text-[#9FABBC] py-[12px] sm:py-[16px] max-w-[650px]" >
           Let&apos;s discuss how our proven process can help you implement AI
           solutions that drive real business results.
         </p>
