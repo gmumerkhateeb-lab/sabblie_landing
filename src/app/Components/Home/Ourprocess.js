@@ -111,7 +111,7 @@ const OurProcess = () => {
         {steps.map((step, index) => (
           <div
             key={index}
-            className="relative w-[35%] sm:w-[45%] lg:w-[22%] flex flex-col items-center"
+            className="relative w-[50%] sm:w-[45%] lg:w-[22%] flex flex-col items-center"
           >
             {/* ---------- Number Circle ---------- */}
             <div className="flex flex-col items-center mb-6">
