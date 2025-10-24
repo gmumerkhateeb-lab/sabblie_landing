@@ -20,7 +20,8 @@ const Readytoautomate = () => {
         gap-[20px] sm:gap-[25px] md:gap-[29px] mx-auto pb-[60px] sm:pb-[80px] md:pb-[99px]"
       >
         {/* -------- Card 1 -------- */}
-        <div className="w-full bg-white rounded-[10px] flex flex-col items-center justify-center mx-auto">
+        <div className=" transform transition-transform duration-300 hover:-translate-y-3
+        w-full bg-white rounded-[10px] flex flex-col items-center justify-center mx-auto">
           <div
             className="h-[58px] w-[58px] py-[5px] px-[4px] rounded-[10px] bg-[#0E315B]
             flex justify-center items-center mt-[22px]"
@@ -78,7 +79,8 @@ const Readytoautomate = () => {
         </div>
 
         {/* -------- Card 2 -------- */}
-        <div className="w-full bg-white rounded-[10px] flex flex-col items-center justify-center mx-auto">
+        <div className="transform transition-transform duration-300 hover:-translate-y-3
+        w-full bg-white rounded-[10px] flex flex-col items-center justify-center mx-auto">
           <div
             className="h-[58px] w-[58px] py-[5px] px-[4px] rounded-[10px] bg-[#0E315B]
             flex justify-center items-center mt-[22px]"
@@ -136,7 +138,8 @@ const Readytoautomate = () => {
         </div>
 
         {/* -------- Card 3 -------- */}
-        <div className="w-full bg-white rounded-[10px] flex flex-col items-center justify-center mx-auto">
+        <div className="transform transition-transform duration-300 hover:-translate-y-3
+        w-full bg-white rounded-[10px] flex flex-col items-center justify-center mx-auto">
           <div
             className="h-[58px] w-[58px] py-[5px] px-[4px] rounded-[10px] bg-[#0E315B]
             flex justify-center items-center mt-[22px]"

@@ -11,8 +11,8 @@ const scrollToTop = () => {
 
 const Imagewithtext = () => {
   return (
-    <section className="Imagewithtext py-5 md:py-20">
-      <div className=" mx-auto px-4 sm:px-6 md:px-12 lg:px-20 flex flex-col md:flex-row items-center gap-2 md:gap-16">
+    <section className="Imagewithtext py-5 lg:py-20">
+      <div className=" mx-auto px-4 sm:px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row items-center gap-2 md:gap-8">
         
         {/* ---------- Left Side Image ---------- */}
         <div className="items-center w-full md:w-1/2 flex justify-center">
@@ -77,7 +77,7 @@ const Imagewithtext = () => {
           </div>
 
           {/* ---------- Buttons ---------- */}
-          <div className=" whitespace-nowrap flex flex-col lg:flex-row justify-center
+          <div className=" whitespace-nowrap flex flex-row justify-center
            md:justify-start gap-3 sm:gap-4 mt-5">
             <Primarybutton text="Schedule a Consultation" onClick={scrollToTop} />
             <Primarybutton text="View LinkedIn Profile" onClick={scrollToTop} />

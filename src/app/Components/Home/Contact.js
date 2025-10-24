@@ -19,7 +19,7 @@ const Contact = () => {
       [e.target.name]: e.target.value,
     });
 
-    // Clear error when user types
+    
     setErrors({
       ...errors,
       [e.target.name]: "",

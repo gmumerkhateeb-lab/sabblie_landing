@@ -3,7 +3,7 @@ const standards = ["SOC 2 Ready", "GDPR Compliant", "HIPAA Aware", "ISO 27001"];
 
 const SecurityStandards = () => {
   return (
-    <section className="bg-[#007C80] rounded-[14px] py-[35px] px-[16px] sm:px-[20px] text-center w-full max-w-[1100px] mx-auto mt-[27px] overflow-hidden">
+    <section className="z-100 bg-[#007C80] rounded-[14px] py-[35px] px-[16px] sm:px-[20px] text-center w-full max-w-[1100px] mx-auto mt-[27px] overflow-hidden">
       {/* Title */}
       <h2 className="text-[18px] sm:text-[20px] font-semibold leading-[26px] sm:leading-[27px] text-[#EAEDF0] mb-[25px] sm:mb-[30px]">
         Security Standards & Certifications

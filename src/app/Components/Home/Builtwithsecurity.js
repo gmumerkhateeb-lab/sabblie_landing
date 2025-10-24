@@ -106,12 +106,14 @@ const cards = [
 const Card = ({ id, title, desc, Icon }) => (
   <article
     key={id}
-    className="w-full max-w-[330px] sm:max-w-[305px] bg-white rounded-[13px] 
+    className="z-100 transform transition-transform duration-300 hover:-translate-y-3
+
+    w-full max-w-[330px] sm:max-w-[305px] bg-white rounded-[13px] 
     shadow-[0_5px_86px_0_rgba(72,104,200,0.25)] overflow-hidden text-center sm:text-left 
     flex flex-col h-full"  
     aria-labelledby={`card-${id}`}
   >
-    <div className="px-[24px] pt-[24px] pb-[30px] flex flex-col flex-grow"> {/* ✅ added flex-grow */}
+    <div className="px-[24px] pt-[24px] pb-[30px] flex flex-col flex-grow"> 
       <div className="w-[58px] h-[58px] flex items-center justify-center bg-[#39B1BE1A] rounded-lg mx-auto sm:mx-0">
         <Icon />
       </div>
@@ -128,7 +130,7 @@ const Card = ({ id, title, desc, Icon }) => (
 /* ---------------- Main Component ---------------- */
 export default function BuiltWithSecurity() {
   return (
-    <section className="py-7 sm:py-16">
+    <section className="py-7 sm:py-16  ">
       <div className="  px-4">
         <div className="text-center mb-5 sm:mb-12">
           <h1 className="text-[23px] sm:text-[30px] md:text-[42px] lg:text-[48px] leading-[40px] sm:leading-[47px] font-bold text-[#1E1E1E] mb-1 sm:mb-4">
@@ -140,8 +142,8 @@ export default function BuiltWithSecurity() {
           </p>
         </div>
 
-        {/*  equal height grid fix */}
-        <div className="pt-[20px] sm:pt-[50px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-[31px] mx-auto justify-items-center items-stretch ">
+        {/*  equal height  */}
+        <div className="z-100 pt-[20px] sm:pt-[50px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-[31px] mx-auto justify-items-center items-stretch ">
           {cards.map((c) => (
             <Card key={c.id} {...c} />
           ))}

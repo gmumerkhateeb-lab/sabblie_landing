@@ -67,7 +67,9 @@ const cards = [
 const Card = ({ id, title, desc, Icon }) => (
   <article
     key={id}
-    className="max-w-[294px] h-[270px] sm:h-[328px] rounded-[13px] bg-primary22 overflow-hidden"
+    className="max-w-[294px] h-[270px] sm:h-[328px] rounded-[13px] bg-primary22 overflow-hidden
+    transform transition-transform duration-300 hover:-translate-y-3 z-22
+"
     style={{
       boxShadow: "0 5.256px 86.726px 0 rgba(72, 104, 200, 0.25)",
     }}
@@ -100,7 +102,7 @@ const Card = ({ id, title, desc, Icon }) => (
 export default function Whywork() {
   return (
     <section>
-      <div className="Whywork mt-[13px] sm:mt-[60px] lg:mt-[152px] flex flex-col justify-center items-center px-4">
+      <div className="Whywork mt-[13px] sm:mt-[60px] lg:mt-[152px] flex  flex-col justify-center items-center px-4">
        <h1
   className="text-center mx-auto text-primary font-bold leading-tight 
   text-[23px] sm:text-[30px] md:text-[42px] lg:text-[54px] flex flex-wrap justify-center items-center gap-2"
@@ -122,9 +124,9 @@ export default function Whywork() {
         </p>
       </div>
 
-      {/* Responsive Flexbox Section */}
-      <div className="pt-[20px] sm:pt-[50px] flex flex-wrap gap-[31px] justify-center 
-      items-start px-4 sm:px-6 md:px-10">
+      {/*  Flexbox Section */}
+      <div className="z-100 pt-[20px] sm:pt-[50px] flex flex-wrap gap-[31px] justify-center 
+      items-start px-4 sm:px-6 md:px-10  ">
         {cards.map((c) => (
           <Card key={c.id} {...c} />
         ))}

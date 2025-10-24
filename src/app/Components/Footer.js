@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
-  // 👇 Smooth scroll enable
+  // Smooth scroll 
   useEffect(() => {
     if (typeof window !== "undefined") {
       document.documentElement.style.scrollBehavior = "smooth";
@@ -103,7 +103,7 @@ const Footer = () => {
       {/* Divider */}
       <div className="border-t border-[#222] mt-10 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-[#888]">
         <div className="flex flex-col gap-[12px]">
-            <p>© 2024 AI + Automation Consulting. All rights reserved.</p>
+            <p>© 2025 AI + Automation Consulting. All rights reserved.</p>
 
           <div className="flex flex-wrap items-center gap-3 mt-2 md:mt-0">
             <Link href="#privacy" className="hover:text-white">Privacy Policy</Link>

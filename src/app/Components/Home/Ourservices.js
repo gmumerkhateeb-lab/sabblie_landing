@@ -125,7 +125,7 @@ const services = [
 
 const Ourservices = () => {
   return (
-    <div className="Ourservices py-[25px] sm:py-[35px] lg:py-20 px-6 md:px-16">
+    <div className="Ourservices py-[25px] sm:py-[35px] lg:py-20 px-6 md:px-16 ">
       <div className="text-center mb-2 sm:mb-12">
         <h1 className="font-bold text-gray-900 
         text-[23px] sm:text-[30px] md:text-[42px] lg:text-[54px]">
@@ -137,11 +137,12 @@ const Ourservices = () => {
         </p>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 ">
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-all"
+            className=" z-100 transform transition-transform duration-300 hover:-translate-y-3
+ bg-white rounded-2xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-all"
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="bg-[#E7F8FA] p-3 rounded-full">{service.icon}</div>
